@@ -5,10 +5,10 @@ import java.util.function.Function;
 
 import edu.wpi.first.shuffleboard.api.data.ComplexDataType;
 
-public class RobotPoseData extends ComplexDataType<RobotPose>{
-	public static final RobotPoseData Instance = new RobotPoseData();
+public class RobotPoseType extends ComplexDataType<RobotPose>{
+	public static final RobotPoseType Instance = new RobotPoseType();
 	
-	public RobotPoseData() {
+	public RobotPoseType() {
 		super("RobotPose", RobotPose.class);
 	}
 	
@@ -21,6 +21,6 @@ public class RobotPoseData extends ComplexDataType<RobotPose>{
 	
 	@Override
 	public RobotPose getDefaultValue() {
-		return new RobotPose(0,0,0);
+		return new RobotPose(50,50,45);
 	}
 }

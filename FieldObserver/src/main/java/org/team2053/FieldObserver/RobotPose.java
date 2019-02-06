@@ -1,6 +1,5 @@
 package org.team2053.FieldObserver;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import edu.wpi.first.shuffleboard.api.data.ComplexData;
@@ -19,31 +18,14 @@ public class RobotPose extends ComplexData<RobotPose> {
 
 	@Override
 	public Map<String, Object> asMap() {
-		Map<String, Object> map = new HashMap<>();
-		map.put("xPos", this.xPos);
-		map.put("yPos", this.yPos);
-		map.put("heading", this.heading);
-		return map;
+		return Map.of("xPos", this.xPos, "yPos", this.yPos, "heading", this.heading);
 	}
 	
 	@Override
-	public boolean equals(Object obj) {
-		double thresh = 0.000001;
-		if(!(obj instanceof RobotPose)) {
-			return false;
-		}
-		RobotPose pose = (RobotPose) obj;
-		double xComp = this.getXPos() - pose.getXPos();
-		double yComp = this.getXPos() - pose.getYPos();
-		double headingComp = this.getHeading() - pose.getHeading();
-		if((Math.abs(xComp - 1) <= thresh) && (Math.abs(yComp - 1) <= thresh) && (Math.abs(headingComp - 1) <= thresh)) {
-			return true;
-		}
-		else {
-			return false;
-		}
+	public String toHumanReadableString() {
+		return String.format("(%.1f, %.1f), %.3f degrees", xPos, yPos, heading);
 	}
-
+	
 	public double getXPos() {
 		return xPos;
 	}
