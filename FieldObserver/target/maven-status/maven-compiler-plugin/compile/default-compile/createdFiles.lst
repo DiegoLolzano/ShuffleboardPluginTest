@@ -1,2 +1,4 @@
 org\team2053\FieldObserver\App.class
+org\team2053\FieldObserver\RobotPoseData.class
+org\team2053\FieldObserver\RobotPose.class
 org\team2053\FieldObserver\FieldObserver.class

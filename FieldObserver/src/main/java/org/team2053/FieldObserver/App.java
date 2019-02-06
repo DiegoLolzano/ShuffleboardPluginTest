@@ -18,4 +18,14 @@ public class App extends Plugin {
 		// TODO Auto-generated method stub
 		return ImmutableList.of(WidgetType.forAnnotatedWidget(FieldObserver.class));
 	}
+
+	@Override
+	public List<DataType> getDataTypes() {
+		return ImmutableList.of(new RobotPoseData());
+	}
+
+	@Override
+	public Map<DataType, ComponentType> getDefaultComponents() {
+		return Map.of(RobotPoseData.Instance, WidgetType.forAnnotatedWidget(FieldObserver.class));
+	}
 }
