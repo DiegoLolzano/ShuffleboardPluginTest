@@ -11,7 +11,7 @@ import edu.wpi.first.shuffleboard.api.plugin.Plugin;
 import edu.wpi.first.shuffleboard.api.widget.ComponentType;
 import edu.wpi.first.shuffleboard.api.widget.WidgetType;
 
-@Description(group = "org.team2053", name = "FieldObserver", summary = "A plugin to take in a robotpose and display it on a virtual field", version = "0.0.1")
+@Description(group = "org.team2053", name = "FieldObserver", summary = "A plugin to take in a robotpose and display it on a virtual field", version = "1.0.0")
 public class App extends Plugin {
 	@Override
 	public List<ComponentType> getComponents() {
